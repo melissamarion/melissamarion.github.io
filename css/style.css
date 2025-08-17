@@ -1,0 +1,60 @@
+/* Basic layout + nice text-on-image button */
+* { box-sizing: border-box; }
+
+:root {
+  --page-max: 980px;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.container {
+  width: min(100% - 32px, var(--page-max));
+  margin-inline: auto;
+}
+
+.hero {
+  position: relative;         /* enables absolute positioning for overlay */
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* Clickable text overlay */
+.overlay-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7em 1.1em;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: clamp(16px, 2.8vw, 24px);
+}
+
+.overlay-link:hover { filter: brightness(1.1); }
+.overlay-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* On small screens, nudge the button lower so it doesn't cover important art */
+@media (max-width: 480px) {
+  .overlay-link {
+    top: 62%;
+  }
+}
