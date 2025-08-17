@@ -33,20 +33,20 @@ body {
 
 /* Clickable text overlay */
 .overlay-link {
-display: block;          /* makes horizontal centering work */
-  width: max-content;      /* button shrinks to fit text */
-  margin: 1rem auto 0;     /* top margin + auto left/right centers it */
+  display: block;           /* keeps it centered */
+  width: max-content;       /* button only as wide as text */
+  margin: 1rem auto 0;      /* top margin + horizontal centering */
   padding: 0.7em 1.1em;
-  border-radius: 999px;
-  background: #0b0b0b;
-  color: #fff;
+  border-radius: 0;         /* remove rounded corners */
+  background: transparent;  /* remove background color */
+  color: #000;              /* black text */
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: none;         /* remove shadow */
+  border: none;             /* remove border */
   font-size: clamp(16px, 2.8vw, 20px);
-  text-align: center;      /* centers text inside button */
+  text-align: center;       /* centers text inside button */
 }
 .overlay-link:hover { filter: brightness(1.1); }
 .overlay-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
