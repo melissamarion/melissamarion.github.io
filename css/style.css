@@ -31,8 +31,9 @@ body {
 }
 
 .button-link {
-  display: inline-block;         /* makes it act like a button, not plain text */
-  margin-top: 1rem;              /* spacing between image and button */
+  display: block;
+  width: max-content;        /* shrink to fit the text */
+  margin: 1rem auto 0;           
   padding: 0.7em 1.1em;          /* space inside button (vertical × horizontal) */
   border-radius: 999px;          /* makes the edges fully rounded, “pill shape” */
   background: #000;              /* black background */
