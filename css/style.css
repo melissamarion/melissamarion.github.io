@@ -16,7 +16,8 @@ body {
 
 .container {
   width: min(100% - 32px, var(--page-max));
-  margin-inline: auto;
+  margin: 0 auto;       /* center container horizontally */
+  text-align: center;    /* center text and inline elements inside */
 }
 
 .hero {
