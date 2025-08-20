@@ -53,7 +53,7 @@ body {
 
 /* On small screens, nudge the button lower so it doesn't cover important art */
 @media (max-width: 480px) {
-  .overlay-link {
+  .button-link {
     top: 62%;
   }
 }
