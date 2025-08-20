@@ -52,4 +52,11 @@ body {
 .button-link:hover {
   background: #333;              /* dark grey when hovered */
 }
+/* Artwork page styles */
+.artwork {
+  display: block;        /* makes it a block element so margin auto works */
+  margin: 1rem auto;     /* centers horizontally, adds vertical spacing */
+  max-width: 100%;       /* keeps image responsive */
+  border-radius: 12px;   /* keeps the rounded corners */
+}
 
