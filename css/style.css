@@ -30,25 +30,26 @@ body {
   border-radius: 14px;
 }
 
-/* Button overlay at bottom of image */
-.overlay-link {
-  position: absolute;       /* overlay on top of image */
-  bottom: 1rem;             /* distance from bottom */
-  left: 50%;                /* center horizontally */
-  transform: translateX(-50%);
-  padding: 0.7em 1.1em;
-  background: transparent;  /* no background */
-  color: #000;              /* black text */
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  border: none;
-  box-shadow: none;
-  font-size: clamp(16px, 2.8vw, 20px);
-  text-align: center;
+.button-link {
+  display: inline-block;         /* makes it act like a button, not plain text */
+  margin-top: 1rem;              /* spacing between image and button */
+  padding: 0.7em 1.1em;          /* space inside button (vertical × horizontal) */
+  border-radius: 999px;          /* makes the edges fully rounded, “pill shape” */
+  background: #000;              /* black background */
+  color: #fff;                   /* white text */
+  text-decoration: none;         /* removes underline from link */
+  font-weight: 600;              /* makes text slightly bold */
+  letter-spacing: 0.3px;         /* adds a tiny space between letters */
+  border: 1px solid rgba(0,0,0,0.15); /* subtle border to define edges */
+  font-size: clamp(16px, 2.8vw, 20px); /* scales button text with screen size */
+  cursor: pointer;               /* makes the cursor change to “hand” on hover */
+  transition: background 0.3s ease; /* smooth color change effect */
 }
-.overlay-link:hover { filter: brightness(1.1); }
-.overlay-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* Hover effect: when user hovers over the button */
+.button-link:hover {
+  background: #333;              /* dark grey when hovered */
+}
 
 /* On small screens, nudge the button lower so it doesn't cover important art */
 @media (max-width: 480px) {
